@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  dev = "ragg_png",
+  dpi = 300
+)
+```
+
+# mitchhenderson
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is a package to store useful helper functions for personal use such as `ggplot2` and `gt` themes, and social media captions.
+
+## Installation
+
+You can install the development version of mitchhenderson from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("mitchhenderson/mitchhenderson")
+```
+
+## Social captions
+
+The `social_caption()` function generates a HTML string that, when rendered, shows LinkedIn, Bluesky, and GitHub usernames and icons.
+
+```{r example}
+library(mitchhenderson)
+
+socials <- social_caption(icon_colour = "dodgerblue", 
+                          font_colour = "black")
+
+socials
+```
+This can be used as a caption on ggplot objects.
+
+```{r plot, echo = FALSE}
+library(ggplot2)
+library(ggtext)
+
+
+df <- data.frame(x = 0:10, y = 0:10)
+
+df |>
+  ggplot(aes(x, y)) +
+    labs(caption = socials) +
+    theme(plot.caption = element_markdown())
+```
