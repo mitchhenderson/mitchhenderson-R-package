@@ -1,12 +1,12 @@
 Package: mitchhenderson
-Title: What the Package Does (One Line, Title Case)
+Title: Helper Functions For Personal Projects
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Mitch", "Henderson", , "mitch.henderson@hotmail.com", role = c("aut", "cre"))
+Description: Package to store helper functions such as {ggplot} and {gt} themes, and regularly used code such as the social media handles caption for plots.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
+Imports: 
+    glue
