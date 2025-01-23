@@ -55,3 +55,14 @@ new_post(
    draft = TRUE
 )
 ```
+
+## Font hoist
+
+The `font_hoist()` function registers all variants of a font as their
+own family. Useful when you want a particular style of a given font.
+This doesn’t persist between sessions so it needs to be called in every
+script the font needs to be used in.
+
+``` r
+font_hoist("Myriad Pro")
+```
