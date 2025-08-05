@@ -27,7 +27,7 @@ rendered, shows LinkedIn, Bluesky, and GitHub usernames and icons.
 ``` r
 library(mitchhenderson)
 
-socials <- social_caption(icon_colour = "dodgerblue", 
+socials <- social_caption(icon_colour = "dodgerblue",
                           font_colour = "black")
 
 socials

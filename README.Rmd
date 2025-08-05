@@ -39,7 +39,7 @@ The `social_caption()` function generates a HTML string that, when rendered, sho
 ```{r example}
 library(mitchhenderson)
 
-socials <- social_caption(icon_colour = "dodgerblue", 
+socials <- social_caption(icon_colour = "dodgerblue",
                           font_colour = "black")
 
 socials
