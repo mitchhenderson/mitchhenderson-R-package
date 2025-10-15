@@ -16,7 +16,7 @@ You can install the development version of mitchhenderson from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("mitchhenderson/mitchhenderson")
+devtools::install_github("mitchhenderson/mitchhenderson-R-package")
 ```
 
 ## Social captions
