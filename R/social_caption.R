@@ -16,15 +16,18 @@
 #'   bluesky_username = "mitchhenderson",
 #'   github_username = "mitchhenderson"
 #'   )
-social_caption <- function(linkedin_name = "Mitch Henderson",
-                           bluesky_username = "mitchhenderson",
-                           github_username = "mitchhenderson",
-                           font_family = "Segoe UI",
-                           icon_colour = "#134A8E",
-                           font_colour = "grey20") {
+social_caption <- function(
+  linkedin_name = "Mitch Henderson",
+  bluesky_username = "mitchhenderson",
+  github_username = "mitchhenderson",
+  font_family = "Source Sans 3",
+  icon_font_family = "Font Awesome 7 Brands",
+  icon_colour = "#134A8E",
+  font_colour = "grey20"
+) {
   glue::glue(
-    "<span style='font-family:\"Font Awesome 6 Brands\";color: {icon_colour}'>&#xf08c;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{linkedin_name}</span>
-     <span style='font-family:\"Font Awesome 6 Brands\";color: {icon_colour}'>&#xe671;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{bluesky_username}</span>
-     <span style='font-family:\"Font Awesome 6 Brands\";color: {icon_colour}'>&#xf09b;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{github_username}</span>"
+    "<span style='font-family:\"{icon_font_family}\";color: {icon_colour}'>&#xf08c;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{linkedin_name}</span>
+     <span style='font-family:\"{icon_font_family}\";color: {icon_colour}'>&#xe671;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{bluesky_username}</span>
+     <span style='font-family:\"{icon_font_family}\";color: {icon_colour}'>&#xf09b;</span> <span style='font-family: \"{font_family}\";color: {font_colour}'>{github_username}</span>"
   )
 }
