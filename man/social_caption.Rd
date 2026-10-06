@@ -8,7 +8,8 @@ social_caption(
   linkedin_name = "Mitch Henderson",
   bluesky_username = "mitchhenderson",
   github_username = "mitchhenderson",
-  font_family = "Segoe UI",
+  font_family = "Source Sans 3",
+  icon_font_family = "Font Awesome 7 Brands",
   icon_colour = "#134A8E",
   font_colour = "grey20"
 )
@@ -21,6 +22,8 @@ social_caption(
 \item{github_username}{GitHub username}
 
 \item{font_family}{Font to use for social media handles}
+
+\item{icon_font_family}{Font to use for the icons}
 
 \item{icon_colour}{Hex colour code for icons}
 

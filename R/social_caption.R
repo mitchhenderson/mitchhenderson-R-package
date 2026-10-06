@@ -4,6 +4,7 @@
 #' @param bluesky_username Bluesky username
 #' @param github_username GitHub username
 #' @param font_family Font to use for social media handles
+#' @param icon_font_family Font to use for the icons
 #' @param icon_colour Hex colour code for icons
 #' @param font_colour Hex colour code for social media handles
 #'

@@ -2,21 +2,17 @@ Package: mitchhenderson
 Title: Helper Functions For Personal Projects
 Version: 0.0.0.9000
 Authors@R: 
-    person("Mitch", "Henderson", , "mitch.henderson@hotmail.com", role = c("aut", "cre"))
-Description: Package to store helper functions such as {ggplot} and {gt} themes, and regularly used code such as the social media handles caption for plots.
+    person("Mitch", "Henderson", , "26275195+mitchhenderson@users.noreply.github.com", role = c("aut", "cre"))
+Description: Helper functions for my own projects: a social media caption for plots and a new post template for a Quarto site.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
 Imports: 
     cli,
-    dplyr,
     fs,
     glue,
-    purrr,
-    rlang,
     rstudioapi,
-    stringr,
-    systemfonts
-URL: https://github.com/mitchhenderson/mitchhenderson
-BugReports: https://github.com/mitchhenderson/mitchhenderson/issues
+    stringr
+URL: https://github.com/mitchhenderson/mitchhenderson-R-package
+BugReports: https://github.com/mitchhenderson/mitchhenderson-R-package/issues
+Config/roxygen2/version: 8.1.0
