@@ -62,11 +62,3 @@ new_post(
    draft = TRUE
 )
 ```
-
-## Font hoist
-
-`font_hoist()` registers every style of a font as its own family, which is useful when you want one particular weight or width. It doesn't persist between sessions, so call it in each script that uses the font.
-
-```{r font hoist, eval=FALSE}
-font_hoist("Myriad Pro")
-```
