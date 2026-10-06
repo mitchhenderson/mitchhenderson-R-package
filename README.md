@@ -3,26 +3,23 @@
 
 # mitchhenderson
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-This is a package to store useful helper functions for personal use such
-as `ggplot2` and `gt` themes, and social media captions.
+Helper functions I use across my own projects, mostly for the charts and
+posts on [mitchhenderson.dev](https://mitchhenderson.dev). It’s built
+for me, so the defaults are my name and my fonts, but you’re welcome to
+use it or copy from it.
 
 ## Installation
 
-You can install the development version of mitchhenderson from
-[GitHub](https://github.com/) with:
-
 ``` r
-# install.packages("devtools")
-devtools::install_github("mitchhenderson/mitchhenderson-R-package")
+# install.packages("remotes")
+remotes::install_github("mitchhenderson/mitchhenderson-R-package")
 ```
 
 ## Social captions
 
-The `social_caption()` function generates a HTML string that, when
-rendered, shows LinkedIn, Bluesky, and GitHub usernames and icons.
+`social_caption()` returns an HTML string with LinkedIn, Bluesky and
+GitHub icons and usernames. The icons need the Font Awesome 7 Brands
+font installed.
 
 ``` r
 library(mitchhenderson)
@@ -31,22 +28,33 @@ socials <- social_caption(icon_colour = "dodgerblue",
                           font_colour = "black")
 
 socials
-#> <span style='font-family:"Font Awesome 6 Brands";color: dodgerblue'>&#xf08c;</span> <span style='font-family: "Segoe UI";color: black'>Mitch Henderson</span>
-#> <span style='font-family:"Font Awesome 6 Brands";color: dodgerblue'>&#xe671;</span> <span style='font-family: "Segoe UI";color: black'>mitchhenderson</span>
-#> <span style='font-family:"Font Awesome 6 Brands";color: dodgerblue'>&#xf09b;</span> <span style='font-family: "Segoe UI";color: black'>mitchhenderson</span>
+#> <span style='font-family:"Font Awesome 7 Brands";color: dodgerblue'>&#xf08c;</span> <span style='font-family: "Source Sans 3";color: black'>Mitch Henderson</span>
+#> <span style='font-family:"Font Awesome 7 Brands";color: dodgerblue'>&#xe671;</span> <span style='font-family: "Source Sans 3";color: black'>mitchhenderson</span>
+#> <span style='font-family:"Font Awesome 7 Brands";color: dodgerblue'>&#xf09b;</span> <span style='font-family: "Source Sans 3";color: black'>mitchhenderson</span>
 ```
 
-This can be used as a caption on ggplot objects.
+Use it as a plot caption, with `ggtext::element_markdown()` to render
+the HTML.
 
-<img src="man/figures/README-plot-1.png" width="100%" />
+``` r
+library(ggplot2)
+library(ggtext)
+
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  labs(caption = socials) +
+  theme(plot.caption = element_markdown())
+```
+
+<img src="man/figures/README-plot-1.png" alt="" width="100%" />
 
 ## New post
 
-The `new_post()` function will create a new folder and `.qmd` file in
-the posts folder of my website project. The arguments to the function
-will pre-fill the YAML. This function was found on [Thomas Mock’s
-blog](https://themockup.blog/posts/2022-11-08-use-r-to-generate-a-quarto-blogpost/)
-with only a very minor modification to remove the console interactivity.
+`new_post()` creates a folder and `.qmd` file in the `posts/` folder of
+a Quarto site, with the YAML filled in from the arguments. It’s from
+[Thomas Mock’s
+blog](https://themockup.blog/posts/2022-11-08-use-r-to-generate-a-quarto-blogpost/),
+with a small change to remove the console prompts.
 
 ``` r
 new_post(
@@ -58,10 +66,9 @@ new_post(
 
 ## Font hoist
 
-The `font_hoist()` function registers all variants of a font as their
-own family. Useful when you want a particular style of a given font.
-This doesn’t persist between sessions so it needs to be called in every
-script the font needs to be used in.
+`font_hoist()` registers every style of a font as its own family, which
+is useful when you want one particular weight or width. It doesn’t
+persist between sessions, so call it in each script that uses the font.
 
 ``` r
 font_hoist("Myriad Pro")
